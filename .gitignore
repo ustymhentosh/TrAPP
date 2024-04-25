@@ -1,0 +1,5 @@
+**/build
+**/dist
+**/tools/__pycache__
+**/pages/__pycache__
+**/transport_app
