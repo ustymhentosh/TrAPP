@@ -40,6 +40,7 @@ def str_list_time(tm):
 def _create_plot_type_1(
     intervals: list, plot_name, bus, stop_name, time, days, save_path
 ):
+
     plt.hist(intervals, color="lightgreen", ec="black", bins=30)
 
     # Calculate mean, median, and standard deviation
@@ -78,11 +79,8 @@ def _create_plot_type_1(
     # plt.savefig(
     #     f"plots/{bus} {stop_name} години {str_list_time(time)} дні {str_list_time(days)}"
     # )
-
-    plt.savefig(save_path)
-
     plt.show()
-    plt.clf()
+    plt.savefig(save_path)
 
 
 def create_plot_for_one_bus_one_stop_intrv(

@@ -6,7 +6,7 @@ import json
 import threading
 from pages.RoutesTab import RoutesTab
 from pages.StopsTab import StopsTab
-from tools.routes_analysis_demo import get_commute_time, _plot_and_save_dct
+from tools.routes_analysis import get_commute_time, _plot_and_save_dct
 
 
 class MainPage(ttk.Frame):

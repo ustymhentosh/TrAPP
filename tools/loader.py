@@ -21,23 +21,22 @@ def extract_and_organize_one_route(
     """
     format_string = "%Y/%m/%d %H:%M"
     df = pd.read_excel(route_file_path, skiprows=skip_rows)
-    unique_stops = set()
-    # unique_segments = set()
-    # segments = {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}}
+    df = df[df[df.columns[1]] != "---"]
+    routes = {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}}
     stops_detected = {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}}
-    bad_count = 0
-    good_count = 0
+    unique_stops = {stop for stop in df[df.columns[0]]}
 
-    # previous_stop_name_time = []
-    for i, value in df.iterrows():
-        # mark unique stops
-        stop_name = value.iloc[0]
-        unique_stops.add(stop_name)
-        stop_time_or_not = value.iloc[1]
+    bus_num = 0
+    prev_day = -1
+    for r in zip(*df.to_dict("list").values()):
+        stop_name = r[0]
+        stop_time_or_not = r[1]
         try:
             stop_time = datetime.strptime(stop_time_or_not, format_string)
+            if stop_time.day < prev_day:
+                bus_num += 1
+            prev_day = stop_time.day
             stop_day = stop_time.weekday()
-            stop_hour = stop_time.hour
 
             # mark instop presence
             if stops_detected[stop_day].get(stop_name):
@@ -49,44 +48,30 @@ def extract_and_organize_one_route(
                     stop_time.strftime(format_string)
                 ]
 
-            # # mark segment
-            # if previous_stop_name_time:
-            #     previous_time = previous_stop_name_time[1]
-            #     if stop_time.date() == previous_time.date():
-            #         segment_time = stop_time - previous_time
-            #         segment_time = segment_time.total_seconds()
-            #         segment_name = f"{previous_stop_name_time[0]}|||{stop_name}"
-            #         unique_segments.add(segment_name)
-            #         if abs(segment_time) > 3600:
-            #             bad_count += 1
-            #         else:
-            #             good_count += 1
-            #             if segments[stop_day].get(segment_name):
-            #                 if segments[stop_day][segment_name].get(stop_hour):
-            #                     segments[stop_day][segment_name][stop_hour].append(
-            #                         segment_time
-            #                     )
-            #                 else:
-            #                     segments[stop_day][segment_name][stop_hour] = [
-            #                         segment_time
-            #                     ]
-            #             else:
-            #                 segments[stop_day][segment_name] = {
-            #                     stop_hour: [segment_time]
-            #                 }
-            # previous_stop_name_time = [stop_name, stop_time]
+            # mark bus presence
+            if routes[stop_day].get(bus_num):
+                routes[stop_day][bus_num].append(
+                    (stop_name, stop_time.strftime(format_string))
+                )
+            else:
+                routes[stop_day][bus_num] = [
+                    (
+                        stop_name,
+                        stop_time.strftime(format_string),
+                    )
+                ]
 
         except Exception as c:
-            previous_stop_name_time = []
-            # print(c)
-    print(bad_count, good_count)
-    # for day in range(6):
-    #     with open(
-    #         f"{save_folder_path}{os.sep}{bus_name}_segments_{day}.json",
-    #         "w",
-    #         encoding="utf-8",
-    #     ) as f:
-    #         json.dump(segments[day], f, indent=4, ensure_ascii=False)
+            print(c)
+
+    for day in range(7):
+        with open(
+            f"{save_folder_path}{os.sep}{bus_name}_segments_{day}.json",
+            "w",
+            encoding="utf-8",
+        ) as f:
+            json.dump(routes[day], f, indent=4, ensure_ascii=False)
+
     for day in range(7):
         with open(
             f"{save_folder_path}{os.sep}{bus_name}_stops_{day}.json",
@@ -125,4 +110,4 @@ def extract_info_from_all_available_routes(
 
 
 if __name__ == "__main__":
-    extract_info_from_all_available_routes("./../data/raw_data", ".organized_data")
+    extract_info_from_all_available_routes("./data/bus_gps", ".organized_data_1")
