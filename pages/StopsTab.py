@@ -232,7 +232,7 @@ class StopsTab(ttk.Frame):
         )
 
     def load_main_dct(self):
-        with open("stops_dct.json", "r", encoding="utf-8") as f:
+        with open("./additional_data/stops_dct.json", "r", encoding="utf-8") as f:
             dct = json.load(f)
         return dct
 

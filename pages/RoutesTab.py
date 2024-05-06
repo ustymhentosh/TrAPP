@@ -3,6 +3,8 @@ import ttkbootstrap as ttk
 import os
 import json
 from tools.routes_analysis import get_commute_time, _plot_and_save_dct
+from tools.map_builder import create_map
+import webbrowser
 
 
 class RoutesTab(ttk.Frame):
@@ -65,6 +67,16 @@ class RoutesTab(ttk.Frame):
             run_butt["state"] = tk.DISABLED
             start_plot_route()
 
+        def build_map():
+            create_map(
+                get_stops_for_bus(),
+                "./additional_data/current_map.html",
+                bus_pick.get(),
+            )
+            url = f"file://{os.getcwd()}/additional_data/current_map.html"
+            # url = "file://d/testdata.html"
+            webbrowser.open(url, new=2)
+
         self.map_pht = ttk.PhotoImage(file="images/map_icon.svg.png")
         self.map_sized = self.map_pht.subsample(10, 10)
 
@@ -94,7 +106,10 @@ class RoutesTab(ttk.Frame):
             textvariable=self.selected_bus,
         )
         map_link = ttk.Button(
-            master=bus_frm, image=self.map_sized, style="primary.outline"
+            master=bus_frm,
+            image=self.map_sized,
+            style="primary.outline",
+            command=build_map,
         )
         bus_pick.bind("<<ComboboxSelected>>", on_field_change)
         bus_lbl.grid(column=0, row=0, sticky="sw")

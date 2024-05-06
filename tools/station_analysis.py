@@ -80,7 +80,6 @@ def _create_plot_type_1(
     #     f"plots/{bus} {stop_name} години {str_list_time(time)} дні {str_list_time(days)}"
     # )
     plt.show()
-    plt.savefig(save_path)
 
 
 def create_plot_for_one_bus_one_stop_intrv(

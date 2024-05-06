@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ca6fc7d736de6db92647acc3017bb466 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+             <h4 align="center" style="font-size:20px; font-family:Calibri;"><b>Маршрут - Тр25</b></h4>
+             
+    
+            <div class="folium-map" id="map_ca6fc7d736de6db92647acc3017bb466" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ca6fc7d736de6db92647acc3017bb466 = L.map(
+                "map_ca6fc7d736de6db92647acc3017bb466",
+                {
+                    center: [49.8397, 24.0297],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_54e63bf85c0d5ffe59b03b2689c2e594 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_54e63bf85c0d5ffe59b03b2689c2e594.addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+            var tile_layer_95211c58c509b4b282722dc95bae8c1a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_95211c58c509b4b282722dc95bae8c1a.addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+            var circle_marker_09edd8aac5fd97e7786f9e58270049ae = L.circleMarker(
+                [49.787405, 24.017618],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_089392421375a49f68851520cf5c7daf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d405906fb7957393786607b3aec2779d = $(`<div id="html_d405906fb7957393786607b3aec2779d" style="width: 100.0%; height: 100.0%;">Автовокзал (433)</div>`)[0];
+                popup_089392421375a49f68851520cf5c7daf.setContent(html_d405906fb7957393786607b3aec2779d);
+            
+        
+
+        circle_marker_09edd8aac5fd97e7786f9e58270049ae.bindPopup(popup_089392421375a49f68851520cf5c7daf)
+        ;
+
+        
+    
+    
+            circle_marker_09edd8aac5fd97e7786f9e58270049ae.bindTooltip(
+                `<div>
+                     Автовокзал (433)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b7a84ce2dfb28071d90a1f9d207bab54 = L.circleMarker(
+                [49.792621, 24.016092],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_c0e981995ba0a742d03bdaf7913188de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46d8697ae5a066c2e295063cc3f27271 = $(`<div id="html_46d8697ae5a066c2e295063cc3f27271" style="width: 100.0%; height: 100.0%;">Максимовича (432)</div>`)[0];
+                popup_c0e981995ba0a742d03bdaf7913188de.setContent(html_46d8697ae5a066c2e295063cc3f27271);
+            
+        
+
+        circle_marker_b7a84ce2dfb28071d90a1f9d207bab54.bindPopup(popup_c0e981995ba0a742d03bdaf7913188de)
+        ;
+
+        
+    
+    
+            circle_marker_b7a84ce2dfb28071d90a1f9d207bab54.bindTooltip(
+                `<div>
+                     Максимовича (432)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f5e67a7820ecce10f3a0d1416c21e54d = L.circleMarker(
+                [49.794712, 24.016521],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_544664c3e99ffe675a03d8806480603f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e7475800a8e219e2764011a0fdf97e0 = $(`<div id="html_7e7475800a8e219e2764011a0fdf97e0" style="width: 100.0%; height: 100.0%;">Гашека (431)</div>`)[0];
+                popup_544664c3e99ffe675a03d8806480603f.setContent(html_7e7475800a8e219e2764011a0fdf97e0);
+            
+        
+
+        circle_marker_f5e67a7820ecce10f3a0d1416c21e54d.bindPopup(popup_544664c3e99ffe675a03d8806480603f)
+        ;
+
+        
+    
+    
+            circle_marker_f5e67a7820ecce10f3a0d1416c21e54d.bindTooltip(
+                `<div>
+                     Гашека (431)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_20c0c2753a2e832146e85d1c7694839a = L.circleMarker(
+                [49.798002, 24.017245],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_8b27dfd8ab06f6de6c8a2b569025f2f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_edb747b32fde837f4335e9c9dd9b2662 = $(`<div id="html_edb747b32fde837f4335e9c9dd9b2662" style="width: 100.0%; height: 100.0%;">Скорини (430)</div>`)[0];
+                popup_8b27dfd8ab06f6de6c8a2b569025f2f4.setContent(html_edb747b32fde837f4335e9c9dd9b2662);
+            
+        
+
+        circle_marker_20c0c2753a2e832146e85d1c7694839a.bindPopup(popup_8b27dfd8ab06f6de6c8a2b569025f2f4)
+        ;
+
+        
+    
+    
+            circle_marker_20c0c2753a2e832146e85d1c7694839a.bindTooltip(
+                `<div>
+                     Скорини (430)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dfaf0da42a7ffcbbc1801a0ec69fca7d = L.circleMarker(
+                [49.801302, 24.017626],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_f664a8c89a2284b7a4c8f613928fccd4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c08696fecb8999ef1fbbbb503def51b7 = $(`<div id="html_c08696fecb8999ef1fbbbb503def51b7" style="width: 100.0%; height: 100.0%;">Стрийська-Наукова (565)</div>`)[0];
+                popup_f664a8c89a2284b7a4c8f613928fccd4.setContent(html_c08696fecb8999ef1fbbbb503def51b7);
+            
+        
+
+        circle_marker_dfaf0da42a7ffcbbc1801a0ec69fca7d.bindPopup(popup_f664a8c89a2284b7a4c8f613928fccd4)
+        ;
+
+        
+    
+    
+            circle_marker_dfaf0da42a7ffcbbc1801a0ec69fca7d.bindTooltip(
+                `<div>
+                     Стрийська-Наукова (565)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7ef218144ed3dbeb8bd8adf2a3809a27 = L.circleMarker(
+                [49.797718, 24.016805],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_0d5752f44cf39462e4e07c77608e05bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4bf58f0a0484de69bd7fe14d32fd5674 = $(`<div id="html_4bf58f0a0484de69bd7fe14d32fd5674" style="width: 100.0%; height: 100.0%;">Скорини (560)</div>`)[0];
+                popup_0d5752f44cf39462e4e07c77608e05bd.setContent(html_4bf58f0a0484de69bd7fe14d32fd5674);
+            
+        
+
+        circle_marker_7ef218144ed3dbeb8bd8adf2a3809a27.bindPopup(popup_0d5752f44cf39462e4e07c77608e05bd)
+        ;
+
+        
+    
+    
+            circle_marker_7ef218144ed3dbeb8bd8adf2a3809a27.bindTooltip(
+                `<div>
+                     Скорини (560)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0b51088f081fc5321c60f85e5833db37 = L.circleMarker(
+                [49.794106, 24.016076],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_a76806937acf9a9058e946b124df265d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb0977fc35f222bc4296c7afb1ec89d5 = $(`<div id="html_fb0977fc35f222bc4296c7afb1ec89d5" style="width: 100.0%; height: 100.0%;">Гашека (561)</div>`)[0];
+                popup_a76806937acf9a9058e946b124df265d.setContent(html_fb0977fc35f222bc4296c7afb1ec89d5);
+            
+        
+
+        circle_marker_0b51088f081fc5321c60f85e5833db37.bindPopup(popup_a76806937acf9a9058e946b124df265d)
+        ;
+
+        
+    
+    
+            circle_marker_0b51088f081fc5321c60f85e5833db37.bindTooltip(
+                `<div>
+                     Гашека (561)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4bd9f4f10316d5163814771ea6e93ed2 = L.circleMarker(
+                [49.79144, 24.015448],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_6f60ef7d601f795dfdb91e75ecbcde11 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb7255d23c0c1ad0fa300beac94091a3 = $(`<div id="html_bb7255d23c0c1ad0fa300beac94091a3" style="width: 100.0%; height: 100.0%;">Максимовича (562)</div>`)[0];
+                popup_6f60ef7d601f795dfdb91e75ecbcde11.setContent(html_bb7255d23c0c1ad0fa300beac94091a3);
+            
+        
+
+        circle_marker_4bd9f4f10316d5163814771ea6e93ed2.bindPopup(popup_6f60ef7d601f795dfdb91e75ecbcde11)
+        ;
+
+        
+    
+    
+            circle_marker_4bd9f4f10316d5163814771ea6e93ed2.bindTooltip(
+                `<div>
+                     Максимовича (562)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_da6e041d702050106222a784266cc880 = L.circleMarker(
+                [49.802604, 24.018361],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_9b2effb4bb6e9cba905927569837284d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c65aa71db84105dcaea1dcae91be7ae = $(`<div id="html_1c65aa71db84105dcaea1dcae91be7ae" style="width: 100.0%; height: 100.0%;">Стрийська-Наукова (436)</div>`)[0];
+                popup_9b2effb4bb6e9cba905927569837284d.setContent(html_1c65aa71db84105dcaea1dcae91be7ae);
+            
+        
+
+        circle_marker_da6e041d702050106222a784266cc880.bindPopup(popup_9b2effb4bb6e9cba905927569837284d)
+        ;
+
+        
+    
+    
+            circle_marker_da6e041d702050106222a784266cc880.bindTooltip(
+                `<div>
+                     Стрийська-Наукова (436)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1c14d584702ab672351cedf577feaae2 = L.circleMarker(
+                [49.808524, 24.019257],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_67b865c6886ce543dee2995568a5d5fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbc3ac27570003f16337fea69c94a3be = $(`<div id="html_bbc3ac27570003f16337fea69c94a3be" style="width: 100.0%; height: 100.0%;">Автобусний завод (429)</div>`)[0];
+                popup_67b865c6886ce543dee2995568a5d5fb.setContent(html_bbc3ac27570003f16337fea69c94a3be);
+            
+        
+
+        circle_marker_1c14d584702ab672351cedf577feaae2.bindPopup(popup_67b865c6886ce543dee2995568a5d5fb)
+        ;
+
+        
+    
+    
+            circle_marker_1c14d584702ab672351cedf577feaae2.bindTooltip(
+                `<div>
+                     Автобусний завод (429)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa52e1d8c2fa013ad56ea5bb59b27131 = L.circleMarker(
+                [49.815149, 24.019922],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_1feadeaa26ba4fbda846a2d64cb4f131 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40ae7cdae08b93d49942cb1d7d5aec75 = $(`<div id="html_40ae7cdae08b93d49942cb1d7d5aec75" style="width: 100.0%; height: 100.0%;">Податкова (428)</div>`)[0];
+                popup_1feadeaa26ba4fbda846a2d64cb4f131.setContent(html_40ae7cdae08b93d49942cb1d7d5aec75);
+            
+        
+
+        circle_marker_fa52e1d8c2fa013ad56ea5bb59b27131.bindPopup(popup_1feadeaa26ba4fbda846a2d64cb4f131)
+        ;
+
+        
+    
+    
+            circle_marker_fa52e1d8c2fa013ad56ea5bb59b27131.bindTooltip(
+                `<div>
+                     Податкова (428)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5a8d13f57a93cb0e31ca8821781b24a7 = L.circleMarker(
+                [49.820428, 24.02041],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_09363b6c570d099bf26d95a7258c3b69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d35b3cb210e4ed58b6e64a7e1a20c18e = $(`<div id="html_d35b3cb210e4ed58b6e64a7e1a20c18e" style="width: 100.0%; height: 100.0%;">Дитяча залізниця (75)</div>`)[0];
+                popup_09363b6c570d099bf26d95a7258c3b69.setContent(html_d35b3cb210e4ed58b6e64a7e1a20c18e);
+            
+        
+
+        circle_marker_5a8d13f57a93cb0e31ca8821781b24a7.bindPopup(popup_09363b6c570d099bf26d95a7258c3b69)
+        ;
+
+        
+    
+    
+            circle_marker_5a8d13f57a93cb0e31ca8821781b24a7.bindTooltip(
+                `<div>
+                     Дитяча залізниця (75)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8ef7c22dec1a20ffab1aca4443d84d68 = L.circleMarker(
+                [49.825141, 24.022969],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_17d494c496e0ae9e0aa513fb1af06a9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99d9a9435ce8d9a51d05249bc03323cc = $(`<div id="html_99d9a9435ce8d9a51d05249bc03323cc" style="width: 100.0%; height: 100.0%;">Академія сухопутних військ (76)</div>`)[0];
+                popup_17d494c496e0ae9e0aa513fb1af06a9f.setContent(html_99d9a9435ce8d9a51d05249bc03323cc);
+            
+        
+
+        circle_marker_8ef7c22dec1a20ffab1aca4443d84d68.bindPopup(popup_17d494c496e0ae9e0aa513fb1af06a9f)
+        ;
+
+        
+    
+    
+            circle_marker_8ef7c22dec1a20ffab1aca4443d84d68.bindTooltip(
+                `<div>
+                     Академія сухопутних військ (76)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_37ccf80934c9dec10ff5876fe3829b5b = L.circleMarker(
+                [49.829517, 24.032333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_d69df72df78e10e2a00110f4bd7f71b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b8526b1bd87aeec0cd7e5327eefe5ab = $(`<div id="html_4b8526b1bd87aeec0cd7e5327eefe5ab" style="width: 100.0%; height: 100.0%;">Стрийський ринок (81)</div>`)[0];
+                popup_d69df72df78e10e2a00110f4bd7f71b3.setContent(html_4b8526b1bd87aeec0cd7e5327eefe5ab);
+            
+        
+
+        circle_marker_37ccf80934c9dec10ff5876fe3829b5b.bindPopup(popup_d69df72df78e10e2a00110f4bd7f71b3)
+        ;
+
+        
+    
+    
+            circle_marker_37ccf80934c9dec10ff5876fe3829b5b.bindTooltip(
+                `<div>
+                     Стрийський ринок (81)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_505fbafabeddd3cefc8a03dd0ef690e8 = L.circleMarker(
+                [49.833876, 24.035329],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_77e7d2b5ca2532d107a97eb5142a5411 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb5e0195ddf2029281474c17f17df9c3 = $(`<div id="html_eb5e0195ddf2029281474c17f17df9c3" style="width: 100.0%; height: 100.0%;">Шота Руставелі (291)</div>`)[0];
+                popup_77e7d2b5ca2532d107a97eb5142a5411.setContent(html_eb5e0195ddf2029281474c17f17df9c3);
+            
+        
+
+        circle_marker_505fbafabeddd3cefc8a03dd0ef690e8.bindPopup(popup_77e7d2b5ca2532d107a97eb5142a5411)
+        ;
+
+        
+    
+    
+            circle_marker_505fbafabeddd3cefc8a03dd0ef690e8.bindTooltip(
+                `<div>
+                     Шота Руставелі (291)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9eaa66b2275a4b5f8f49bb66c6e8cbe9 = L.circleMarker(
+                [49.829806, 24.032437],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_150428279d0f058de5cf70025214bfa7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f5fa779003ec07be941d6fb79c6bc9d = $(`<div id="html_9f5fa779003ec07be941d6fb79c6bc9d" style="width: 100.0%; height: 100.0%;">Стрийський ринок (80)</div>`)[0];
+                popup_150428279d0f058de5cf70025214bfa7.setContent(html_9f5fa779003ec07be941d6fb79c6bc9d);
+            
+        
+
+        circle_marker_9eaa66b2275a4b5f8f49bb66c6e8cbe9.bindPopup(popup_150428279d0f058de5cf70025214bfa7)
+        ;
+
+        
+    
+    
+            circle_marker_9eaa66b2275a4b5f8f49bb66c6e8cbe9.bindTooltip(
+                `<div>
+                     Стрийський ринок (80)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2d589e63ca44b531791e62c7d0e7c38f = L.circleMarker(
+                [49.82412, 24.020624],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_58184ace0f8634459d1f3d4b9a0e89ad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24b1ac74a040e6154400e522e0e31df9 = $(`<div id="html_24b1ac74a040e6154400e522e0e31df9" style="width: 100.0%; height: 100.0%;">Академія сухопутних військ (567)</div>`)[0];
+                popup_58184ace0f8634459d1f3d4b9a0e89ad.setContent(html_24b1ac74a040e6154400e522e0e31df9);
+            
+        
+
+        circle_marker_2d589e63ca44b531791e62c7d0e7c38f.bindPopup(popup_58184ace0f8634459d1f3d4b9a0e89ad)
+        ;
+
+        
+    
+    
+            circle_marker_2d589e63ca44b531791e62c7d0e7c38f.bindTooltip(
+                `<div>
+                     Академія сухопутних військ (567)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a7cfbda9fa1cd42f888c89b446622739 = L.circleMarker(
+                [49.820521, 24.020292],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_9a49ba3efa923c647c6c438c0eedeed0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b6c0d4dd20de23907bd7cad5fdfce32 = $(`<div id="html_9b6c0d4dd20de23907bd7cad5fdfce32" style="width: 100.0%; height: 100.0%;">Дитяча залізниця (558)</div>`)[0];
+                popup_9a49ba3efa923c647c6c438c0eedeed0.setContent(html_9b6c0d4dd20de23907bd7cad5fdfce32);
+            
+        
+
+        circle_marker_a7cfbda9fa1cd42f888c89b446622739.bindPopup(popup_9a49ba3efa923c647c6c438c0eedeed0)
+        ;
+
+        
+    
+    
+            circle_marker_a7cfbda9fa1cd42f888c89b446622739.bindTooltip(
+                `<div>
+                     Дитяча залізниця (558)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_beb140d4a7410e92137381580b485d43 = L.circleMarker(
+                [49.814975, 24.019753],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_a7a9cb74d1de41599cf2aa434c88b0a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5bbe37ba4590558ad8b4a31ef85e342b = $(`<div id="html_5bbe37ba4590558ad8b4a31ef85e342b" style="width: 100.0%; height: 100.0%;">Податкова (566)</div>`)[0];
+                popup_a7a9cb74d1de41599cf2aa434c88b0a1.setContent(html_5bbe37ba4590558ad8b4a31ef85e342b);
+            
+        
+
+        circle_marker_beb140d4a7410e92137381580b485d43.bindPopup(popup_a7a9cb74d1de41599cf2aa434c88b0a1)
+        ;
+
+        
+    
+    
+            circle_marker_beb140d4a7410e92137381580b485d43.bindTooltip(
+                `<div>
+                     Податкова (566)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_90f713fe88f92c6830ba4c6152f83383 = L.circleMarker(
+                [49.807627, 24.019037],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_2b198ffec8b33332ce8eb1e4b1ad8449 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_276af749f38d16de254132623a0dd540 = $(`<div id="html_276af749f38d16de254132623a0dd540" style="width: 100.0%; height: 100.0%;">Автобусний завод (559)</div>`)[0];
+                popup_2b198ffec8b33332ce8eb1e4b1ad8449.setContent(html_276af749f38d16de254132623a0dd540);
+            
+        
+
+        circle_marker_90f713fe88f92c6830ba4c6152f83383.bindPopup(popup_2b198ffec8b33332ce8eb1e4b1ad8449)
+        ;
+
+        
+    
+    
+            circle_marker_90f713fe88f92c6830ba4c6152f83383.bindTooltip(
+                `<div>
+                     Автобусний завод (559)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_11f8d4f8b8fcbbc84d97250d87effab3 = L.circleMarker(
+                [49.833343, 24.035221],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_66392dbe337173f7e0abf29924e3abfd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f00cb88eb9efee8e78b9a0936e6750dd = $(`<div id="html_f00cb88eb9efee8e78b9a0936e6750dd" style="width: 100.0%; height: 100.0%;">Шота Руставелі (291-1)</div>`)[0];
+                popup_66392dbe337173f7e0abf29924e3abfd.setContent(html_f00cb88eb9efee8e78b9a0936e6750dd);
+            
+        
+
+        circle_marker_11f8d4f8b8fcbbc84d97250d87effab3.bindPopup(popup_66392dbe337173f7e0abf29924e3abfd)
+        ;
+
+        
+    
+    
+            circle_marker_11f8d4f8b8fcbbc84d97250d87effab3.bindTooltip(
+                `<div>
+                     Шота Руставелі (291-1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49b5f3488f3ff652fff1b51ef69f423b = L.circleMarker(
+                [49.787379, 24.017213],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_2cebfb9eccfc8de4712a7953d1dd8c3c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5f2bface9caf283ab4ae55e6687a7e0 = $(`<div id="html_e5f2bface9caf283ab4ae55e6687a7e0" style="width: 100.0%; height: 100.0%;">Автовокзал (433-01)</div>`)[0];
+                popup_2cebfb9eccfc8de4712a7953d1dd8c3c.setContent(html_e5f2bface9caf283ab4ae55e6687a7e0);
+            
+        
+
+        circle_marker_49b5f3488f3ff652fff1b51ef69f423b.bindPopup(popup_2cebfb9eccfc8de4712a7953d1dd8c3c)
+        ;
+
+        
+    
+    
+            circle_marker_49b5f3488f3ff652fff1b51ef69f423b.bindTooltip(
+                `<div>
+                     Автовокзал (433-01)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_67fb826532f1d36fb3b414a4665d8f44 = L.circleMarker(
+                [49.833166, 24.036112],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_ca6fc7d736de6db92647acc3017bb466);
+        
+    
+        var popup_2aaa0adfdc19c9c88b3cdb989597af9e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_224e22ba59202a21a860f3608fd5ed1a = $(`<div id="html_224e22ba59202a21a860f3608fd5ed1a" style="width: 100.0%; height: 100.0%;">Шота Руставелі (22)</div>`)[0];
+                popup_2aaa0adfdc19c9c88b3cdb989597af9e.setContent(html_224e22ba59202a21a860f3608fd5ed1a);
+            
+        
+
+        circle_marker_67fb826532f1d36fb3b414a4665d8f44.bindPopup(popup_2aaa0adfdc19c9c88b3cdb989597af9e)
+        ;
+
+        
+    
+    
+            circle_marker_67fb826532f1d36fb3b414a4665d8f44.bindTooltip(
+                `<div>
+                     Шота Руставелі (22)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
