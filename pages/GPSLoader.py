@@ -48,16 +48,15 @@ class GPSLoaderPG(ttk.Frame):
                 for i in os.listdir(path_to_excels_folder):
                     self.progress_bar["value"] = self.progress_bar["value"] + 1
                     self.progress_num["text"] = f"{round(100 * self.progress_bar["value"]/ total_len, 1)}%"
-                    print(i)
 
-                    # if not os.path.exists(f"{self.path_to_results_fldr}/{Path(i).stem}/"):
-                    #     os.makedirs(f"{self.path_to_results_fldr}/{Path(i).stem}/")
-                    # extract_and_organize_one_route(
-                    #     f"{path_to_excels_folder}/{i}",
-                    #     4,
-                    #     f"{self.path_to_results_fldr}/{Path(i).stem}",
-                    #     Path(i).stem,
-                    # )
+                    if not os.path.exists(f"{self.path_to_results_fldr}/{Path(i).stem}/"):
+                        os.makedirs(f"{self.path_to_results_fldr}/{Path(i).stem}/")
+                    extract_and_organize_one_route(
+                        f"{path_to_excels_folder}/{i}",
+                        4,
+                        f"{self.path_to_results_fldr}/{Path(i).stem}",
+                        Path(i).stem,
+                    )
                 master.switch_frame("MainPage", self.main_dir)
                 master.deiconify()
                 self.progress_window.destroy()
