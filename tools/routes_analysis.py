@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json
 
+plt.style.use("default")
+
 
 def _plot_and_save_dct(dct, plot_name, fl_nm):
     """
@@ -79,6 +81,6 @@ def get_commute_time(
 if __name__ == "__main__":
 
     dct = get_commute_time(
-        ".organized_gps/18", "18", "Низинна (195)", "Податкова (428)"
+        ".organized_gps/3А", "3А", "ТРЦ Кінг Кросс (320)", "Податкова (428)"
     )
-    _plot_and_save_dct(dct, "Some plot", "plots/test.png")
+    _plot_and_save_dct(dct, "від Кінг-Крос до Податкової(понеділок)", "plots/test.png")
