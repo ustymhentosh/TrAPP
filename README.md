@@ -15,7 +15,6 @@ lines 6 and on - date
 - column 1 = stop name,
 - column 2 = time of arrival in year/month/day h:min format
 example:
-![[Pasted image 20240506034544.png|500]]
 <span style="color:#ff0000">the format of the data column is critical!</span>
 
 #### 3. Launch and calculation
